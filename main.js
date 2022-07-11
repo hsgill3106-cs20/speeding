@@ -21,6 +21,9 @@ function determineBtnClicked() {
 
 // DETERMINE TICKET
 function determineTicket(driverSpeed, speedLimit) {
+  let driverSpeed = +driverSpeedInput.value;
+  let speedLimit = +speedLimitInput.value;
+
    if (driverSpeed >= speedLimit + 20) {
     outputSpan.innerHTML = "BIG TICKET";
   } else if (driverSpeed > speedLimit) {
@@ -28,5 +31,6 @@ function determineTicket(driverSpeed, speedLimit) {
   } else {
     outputSpan.innerHTML = "NO TICKET";
   }
-
+console.log(determineTicket(90, 70))
 }
+
